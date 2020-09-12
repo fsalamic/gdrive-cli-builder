@@ -59,18 +59,24 @@ jobs:
         name: release
         path: release/*
         
+    - name : Date
+      id: date
+      run: echo "::set-output name=date::$(date +"%d-%m-%Y")"
+
     - name: Create Release
       id: create_release 
       uses: actions/create-release@v1
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NTAG_NAME: ${{ steps.date.outputs.date }}
       with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ steps.date.outputs.date }}
+          release_name: Release ${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
-    - name: Upload Release Asset
-      id: upload-release-asset 
+
+    - name: Upload Release Asset Linux x64
+      id: upload-release-asset-linux-x64 
       uses: actions/upload-release-asset@v1
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,3 +85,4 @@ jobs:
           asset_path: ./release/gdrive-linux-x64
           asset_name: gdrive-linux-x64
           asset_content_type: application/octet-stream
+
