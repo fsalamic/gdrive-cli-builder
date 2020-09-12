@@ -54,7 +54,7 @@ jobs:
         cp -r $HOME/go/src/github.com/gdrive-org/gdrive/_release/bin/* release
 
     - name: Save build file to artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: release
-        path: release
+        path: release/*
