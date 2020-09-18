@@ -194,6 +194,7 @@ On unix systems run `chmod +x {filename}` after download to make the binary exec
 
 ### Authors
 - Ma'ruf Shidiq - *Initialize GitHub Actions workflow* - [marufshidiq](https://github.com/marufshidiq)
+- Filip Salamic - *Add a releases mecahnism for the binaries* - [fsalamic](https://github.com/fsalamic)
 
 ### Thanks to
 [prasmussen](https://github.com/prasmussen) and [all](https://github.com/gdrive-org/gdrive/graphs/contributors) GDrive CLI contributor for creating a great tools
