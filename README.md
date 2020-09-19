@@ -192,6 +192,14 @@ On unix systems run `chmod +x {filename}` after download to make the binary exec
 [Official documentation](https://github.com/gdrive-org/gdrive#usage)
 </details>
 
+<details>
+<summary>
+    Downloading GDrive CLI from Github Releases
+</summary>
+
+[Official downloads](https://github.com/fsalamic/gdrive-cli-builder/releases/latest)
+</details>
+
 ### Authors
 - Ma'ruf Shidiq - *Initialize GitHub Actions workflow* - [marufshidiq](https://github.com/marufshidiq)
 - Filip Salamic - *Add a releases mecahnism for the binaries* - [fsalamic](https://github.com/fsalamic)
